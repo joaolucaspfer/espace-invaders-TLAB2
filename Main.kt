@@ -18,7 +18,7 @@ fun main() {
             playerX = mouseEvent.x - PLAYER_SIZE / 2
 
             if (playerX < 0) playerX = 0
-            if (playerX > WIDTH - PLAYER_SIZE) playerX = WIDTH - PLAYER_SIZE
+            if (playerX > WIDTH - PLAYER_SIZE * 2) playerX = WIDTH - PLAYER_SIZE * 2
 
             cv.erase()
             cv.drawRect(playerX, PLAYER_Y, PLAYER_SIZE * 2, PLAYER_SIZE / 4, BLUE)
