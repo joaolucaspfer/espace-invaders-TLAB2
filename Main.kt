@@ -12,16 +12,16 @@ fun main() {
     onStart {
         val cv = Canvas(WIDTH, HEIGHT, BLACK)
 
-        cv.drawRect(playerX, PLAYER_Y, PLAYER_SIZE * 2, PLAYER_SIZE / 4, GREEN)
+        cv.drawRect(playerX, PLAYER_Y, PLAYER_SIZE * 2, PLAYER_SIZE / 5, GREEN)
 
         cv.onMouseMove { mouseEvent ->
-            playerX = mouseEvent.x - PLAYER_SIZE / 2
+            playerX = mouseEvent.x - PLAYER_SIZE
 
             if (playerX < 0) playerX = 0
             if (playerX > WIDTH - PLAYER_SIZE * 2) playerX = WIDTH - PLAYER_SIZE * 2
 
             cv.erase()
-            cv.drawRect(playerX, PLAYER_Y, PLAYER_SIZE * 2, PLAYER_SIZE / 4, GREEN)
+            cv.drawRect(playerX, PLAYER_Y, PLAYER_SIZE * 2, PLAYER_SIZE / 5, GREEN)
         }
     }
 }
